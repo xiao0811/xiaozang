@@ -31,15 +31,19 @@ class UserController extends Controller
 
         $user->name     = $request->post("username");
         $user->password = bcrypt($request->post("password"));
-        $user->phone    = "1894988" . mt_rand(1000, 9999);
+        $user->phone    = "1894988" . mt_rand(1000, 9999);      // 暂定-
         $user->is_admin = 0;
 
         $user->save();
 
         // 从passport handler创建新的token
         $passport = new Passport();
-        $token    = $passport->createToken($user->name, $user->password);
-        return $this->returnJson($token, "注册成功");
+        $response = $passport->createToken($user->name, $user->password);
+        if ($response["error"] == 0) {
+            return $this->returnJson($response["data"]);
+        } else {
+            return $this->returnJson([], $response["message"], 400);
+        }
     }
 
     // 刷新Token
@@ -56,8 +60,12 @@ class UserController extends Controller
         }
 
         $passport = new Passport();
-        $token    = $passport->refreshToken($request->post("refresh_token"));
-        return $this->returnJson($token, "刷新成功");
+        $response = $passport->refreshToken($request->post("refresh_token"));
+        if ($response["error"] == 0) {
+            return $this->returnJson($response["data"]);
+        } else {
+            return $this->returnJson([], $response["message"], 400);
+        }
     }
 
     // 获取用户信息
@@ -75,6 +83,33 @@ class UserController extends Controller
     // 用户登录
     public function login(Request $request)
     {
+        $validator = Validator::make($request->post(), [
+            "username" => "required|exists:users,name",
+            "password" => "required"
+        ], [
+            "username.required" => "用户名不能为空",
+            "username.exists"   => "改用户不存在",
+            "password.required" => "密码不能为空",
+        ]);
 
+        if ($validator->fails()) {
+            return $this->returnJson([], $validator->errors()->first(), 400);
+        }
+
+        // 验证不通过
+        if (!Auth::attempt(["name"     => $request->post("username"),
+                            "password" => $request->post("password")])) {
+            return $this->returnJson([], "用户名或密码错误", 400);
+        }
+
+        $passpart = new Passport();
+        $response = $passpart->createToken($request->post("username"),
+            $request->post("password"));
+
+        if ($response["error"] == 0) {
+            return $this->returnJson($response["data"]);
+        } else {
+            return $this->returnJson([], $response["message"], 400);
+        }
     }
 }

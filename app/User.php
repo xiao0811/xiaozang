@@ -38,11 +38,13 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    // 替换email 做验证项
     public function findForPassport($username)
     {
         return $this->where('name', $username)->first();
     }
 
+    // 密码验证规则
     public function validateForPassportPasswordGrant($password) {
         return bcrypt($password);
     }

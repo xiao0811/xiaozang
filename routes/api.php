@@ -18,6 +18,9 @@ Route::get("/login", "UserController@nameLogin")->name("login");
 Route::group(["prefix" => "account"], function () {
     Route::post("preregister", "UserController@preregister");
     Route::post("refreshToken", "UserController@refreshToken");
+    Route::post("login", "UserController@login");
+
+    // 添加中间件
     Route::group(["middleware" => "auth:api"], function () {
         Route::get("getDetails", "UserController@getDetails");
     });
