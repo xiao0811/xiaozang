@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="142cee32-a346-40fe-aee8-01cf190a45b7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Handlers/BaseHandler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Handlers/Passport.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Handlers/Passport.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -186,7 +181,7 @@
       <workItem from="1568273824730" duration="1849000" />
       <workItem from="1568767823195" duration="1632000" />
       <workItem from="1568769605148" duration="318000" />
-      <workItem from="1568770998181" duration="10527000" />
+      <workItem from="1568770998181" duration="10785000" />
     </task>
     <task id="LOCAL-00001" summary="网页模板">
       <created>1568272473395</created>
@@ -209,7 +204,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568785065459</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="passport">
+      <created>1568787476804</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1568787476804</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,6 +232,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="网页模板" />
-    <option name="LAST_COMMIT_MESSAGE" value="网页模板" />
+    <MESSAGE value="passport" />
+    <option name="LAST_COMMIT_MESSAGE" value="passport" />
   </component>
 </project>
