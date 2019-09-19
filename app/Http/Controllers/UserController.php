@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Handlers\Passport;
+use App\Handlers\SMS;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -111,5 +112,11 @@ class UserController extends Controller
         } else {
             return $this->returnJson([], $response["message"], 400);
         }
+    }
+
+    public function test()
+    {
+        $sms = new SMS();
+        return $sms->send("18949883585", "骁傻");
     }
 }
