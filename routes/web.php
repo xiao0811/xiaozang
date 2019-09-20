@@ -12,3 +12,7 @@
 */
 
 Route::get('/', "UserController@test");
+
+Route::get("/abc", function () {
+    return "abc";
+});

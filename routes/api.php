@@ -27,3 +27,12 @@ Route::group(["prefix" => "account"], function () {
 });
 
 
+Route::group(["prefix" => "banner"], function () {
+    Route::get("/{id?}", "BannerController@index");
+
+    Route::group([], function () {
+        Route::post("/", "BannerController@store");
+        Route::put("/{id}", "BannerController@update");
+        Route::delete("/{id}", "BannerController@delete");
+    });
+});
