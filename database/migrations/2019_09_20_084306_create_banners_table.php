@@ -18,9 +18,9 @@ class CreateBannersTable extends Migration
             $table->string("title")->comment("标题");
             $table->string("path")->comment("图片地址");
             $table->string("link")->default("")->comment("图片链接");
-            $table->unsignedSmallInteger("is_show")->default(0)->comment("是否显示");
-            $table->unsignedSmallInteger("type")->comment("类型");
-            $table->unsignedSmallInteger("sort")->default(100)->comment("排序, 越小越靠前");
+            $table->unsignedTinyInteger("is_show")->default(0)->comment("是否显示");
+            $table->unsignedTinyInteger("type")->default("1")->comment("类型");
+            $table->unsignedTinyInteger("sort")->default(100)->comment("排序, 越小越靠前");
             $table->timestamps();
         });
     }
