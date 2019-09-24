@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="142cee32-a346-40fe-aee8-01cf190a45b7" name="Default Changelist" comment="Banner">
-      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/Admin.php" afterDir="false" />
+    <list default="true" id="142cee32-a346-40fe-aee8-01cf190a45b7" name="Default Changelist" comment="更改数据结构">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ToolController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_09_20_084306_create_banners_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_09_20_084306_create_banners_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BannerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BannerController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -195,7 +195,11 @@
       <workItem from="1568801944095" duration="10144000" />
       <workItem from="1568878137260" duration="232000" />
       <workItem from="1568938736502" duration="32000" />
-      <workItem from="1568940027389" duration="6963000" />
+      <workItem from="1568940027389" duration="13273000" />
+      <workItem from="1568958854668" duration="2494000" />
+      <workItem from="1568961707373" duration="1776000" />
+      <workItem from="1569308174386" duration="251000" />
+      <workItem from="1569313386930" duration="590000" />
     </task>
     <task id="LOCAL-00001" summary="网页模板">
       <created>1568272473395</created>
@@ -260,7 +264,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568945226787</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="更改数据结构">
+      <created>1568947023725</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1568947023725</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -287,6 +298,7 @@
     <MESSAGE value="短信" />
     <MESSAGE value="readme" />
     <MESSAGE value="Banner" />
-    <option name="LAST_COMMIT_MESSAGE" value="Banner" />
+    <MESSAGE value="更改数据结构" />
+    <option name="LAST_COMMIT_MESSAGE" value="更改数据结构" />
   </component>
 </project>

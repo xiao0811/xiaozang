@@ -35,3 +35,7 @@ Route::group(["prefix" => "banner"], function () {
         Route::delete("/{id}", "BannerController@delete");
     });
 });
+
+Route::group(["prefix" => "tools"], function () {
+    Route::post("upload", "ToolController@imageUpload");
+});

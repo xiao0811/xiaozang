@@ -12,7 +12,8 @@ class BannerController extends Controller
     {
         if ($id == null) {
             // id 不存在返回全部
-            $banners = Banner::query()->where("is_show", 1)->get();
+            $banners = Banner::query()->where("is_show", 1)
+                ->orderBy("sort")->get();
             return $this->returnJson($banners);
         } else {
             $banner = Banner::query()->find($id);
@@ -24,7 +25,7 @@ class BannerController extends Controller
     {
         $validator = Validator::make($request->post(), [
             "title"   => "required",
-            "path"    => "required|url",
+            "path"    => "url",
             "link"    => "url",
             "is_show" => "integer|between:0,1",
             "type"    => "required|between:1,3",

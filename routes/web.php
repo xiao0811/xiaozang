@@ -13,6 +13,4 @@
 
 Route::get('/', "UserController@test");
 
-Route::get("/abc", function () {
-    return "abc";
-});
+Route::get("/xiaosha", "ToolController@test");
