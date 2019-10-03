@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Handlers\Passport;
 use App\User;
+use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Validator;
@@ -115,6 +116,8 @@ class UserController extends Controller
 
     public function test()
     {
-        //
+        $client = new Client();
+        $response = $client->get("http://www.baidu.com");
+        echo $response->getBody();
     }
 }

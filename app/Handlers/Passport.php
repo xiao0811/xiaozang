@@ -11,7 +11,7 @@ class Passport extends BaseHandler
         try {
             $http = new Client();
 
-            $response = $http->post('http://127.0.0.1/oauth/token', [
+            $response = $http->post(url("/oauth/token"), [
                 'form_params' => [
                     'grant_type'    => 'password',
                     'client_id'     => config("passport.client_id"),
@@ -31,7 +31,7 @@ class Passport extends BaseHandler
         try {
             $http = new Client();
 
-            $response = $http->post('http://127.0.0.1/oauth/token', [
+            $response = $http->post(url("/oauth/token"), [
                 'form_params' => [
                     'grant_type'    => 'refresh_token',
                     'refresh_token' => $refresh_token,
