@@ -12,3 +12,5 @@ laravel 6.0.3
 
 `php artisan passport:install`
 
+` php artisan storage:link`
+
