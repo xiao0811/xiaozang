@@ -8,6 +8,7 @@ import (
 	"xiaosha/config"
 
 	"github.com/jinzhu/gorm"
+	// mysql init
 	_ "github.com/jinzhu/gorm/dialects/mysql"
 )
 

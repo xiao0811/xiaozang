@@ -14,6 +14,9 @@ func GetRoute() *gin.Engine {
 	{
 		user.GET("/", UserController.Index)
 		user.POST("/", UserController.Create)
+		user.PUT("/:id", UserController.Update)
+		user.DELETE("/:id", UserController.Delete)
+		user.GET("/:id", UserController.GetUserByID)
 	}
 	// app.GET("/", handler.CreateToken)
 
