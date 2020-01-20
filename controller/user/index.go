@@ -1,6 +1,7 @@
 package user
 
 import (
+	"fmt"
 	"net/http"
 
 	"xiaosha/handler"
@@ -28,7 +29,7 @@ func Create(c *gin.Context) {
 			Data:    nil,
 		}.JSON(c)
 	} else {
-		if err := db.Create(user).Error; err != nil {
+		if err := db.Create(&user).Error; err != nil {
 			handler.Return{
 				Code:    http.StatusInternalServerError,
 				Message: "服务器出错",
@@ -41,5 +42,6 @@ func Create(c *gin.Context) {
 				Data:    user,
 			}.JSON(c)
 		}
+		fmt.Println(user)
 	}
 }
