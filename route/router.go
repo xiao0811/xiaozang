@@ -1,7 +1,7 @@
 package route
 
 import (
-	"xiaosha/handler"
+	UserController "xiaosha/controller/user"
 
 	"github.com/gin-gonic/gin"
 )
@@ -10,7 +10,11 @@ import (
 func GetRoute() *gin.Engine {
 	app := gin.Default()
 
-	app.GET("/", handler.CreateToken)
+	user := app.Group("/user")
+	{
+		user.GET("/", UserController.Index)
+	}
+	// app.GET("/", handler.CreateToken)
 
 	return app
 }
