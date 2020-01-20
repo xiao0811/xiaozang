@@ -13,6 +13,7 @@ func GetRoute() *gin.Engine {
 	user := app.Group("/user")
 	{
 		user.GET("/", UserController.Index)
+		user.POST("/", UserController.Create)
 	}
 	// app.GET("/", handler.CreateToken)
 

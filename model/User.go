@@ -7,10 +7,10 @@ import (
 // User Model
 type User struct {
 	gorm.Model
-	Username   string `json:"username"`
-	Password   string `json:"password"`
-	Department uint8  `json:"department"`
-	Email      string `json:"email"`
+	Username   string `json:"username" form:"username"`
+	Password   string `json:"password" form:"password"`
+	Department uint8  `json:"department" form:"department"`
+	Email      string `json:"email" form:"email"`
 }
 
 // TableName 重新设置表名
