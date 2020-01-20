@@ -13,6 +13,7 @@ type MysqlConfig struct {
 	Password string `yaml:"PASSWORD"`
 	Database string `yaml:"DATABASE"`
 	Port     int    `yaml:"PORT"`
+	Host     string `yaml:"HOST"`
 }
 
 // GetMysqlConfig 读取配置文件

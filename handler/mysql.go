@@ -2,6 +2,7 @@ package handler
 
 import (
 	"log"
+	"strconv"
 	"sync"
 
 	"xiaosha/config"
@@ -23,7 +24,9 @@ func GetEloquent() *gorm.DB {
 
 	once.Do(func() {
 		db, err = gorm.Open("mysql", mysqlConfig.Username+":"+
-			mysqlConfig.Password+"@/"+
+			mysqlConfig.Password+"@("+
+			mysqlConfig.Host+":"+
+			strconv.Itoa(mysqlConfig.Port)+")/"+
 			mysqlConfig.Database+"?charset=utf8&parseTime=True&loc=Local")
 		if err != nil {
 			log.Fatalln(err)
